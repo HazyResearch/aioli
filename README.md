@@ -90,10 +90,10 @@ For all the sample scripts, replace `SLIMPAJAMA_DIR` with where you want to keep
 
 We've also implemented several baselines within this repo. You can run baselines by doing the following:
 - Grid search: run `scripts/full/sweep/run.sh` or equivalent in other directories.
-- Data Mixing Laws:
-      - run `scripts/full/sweep/run.sh` or equivalent in other directories
-      - derive the optimal mix by running `python mixing_law_fitting.py linreg --run_dir /path/to/results --proportions_file /path/to/proportions/swept`
-      - run `scripts/full/sweep/run_final.sh`, filling in your optimal mix
+- Data Mixing Laws:  
+      - run `scripts/full/sweep/run.sh` or equivalent in other directories  
+      - derive the optimal mix by running `python mixing_law_fitting.py linreg --run_dir /path/to/results --proportions_file /path/to/proportions/swept`  
+      - run `scripts/full/sweep/run_final.sh`, filling in your optimal mix  
 - Skill-it: run `scripts/full/skillit/graph_learning.sh`. The skills graph needs to be created using `python mixing_law_fitting.py skills_graph --run_dir /path/to/results --seed seed`, then `run.sh`
 - DoGE: run `scripts/full/doge/run_proxy.sh`. Get the weights by loading `outputs/.../seed_{seed}_doge_avg_dw.pkl`, then `run_final.sh`
 - DoReMi: run `scripts/full/doremi/run_reference.sh`, then `run_proxy.sh`. Get the weights by loading `outputs/.../seed_{seed}_doremi_avg_dw.pkl`, then `run_final.sh`
